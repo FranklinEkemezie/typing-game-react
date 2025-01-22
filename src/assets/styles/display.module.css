@@ -1,0 +1,38 @@
+.container {
+    height: 360px;
+
+    border: 2px solid black;
+    border-radius: .64rem;
+    padding: .64rem;
+    background-color: whitesmoke;
+
+    position: relative;
+}
+.textToTypeDisplay,
+.typingAreaContainer,
+.typingArea {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: 1.6rem;
+    line-height: 4rem;
+
+    padding: .4rem;
+}
+.textToTypeDisplay,
+.typingArea {
+    height: 100%;
+    overflow: clip;
+}
+.typingAreaContainer {
+    top: 2rem;
+}
+.typingArea {
+    margin: 0;
+    border: none;
+    outline: none;
+}
