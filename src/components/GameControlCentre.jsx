@@ -99,14 +99,14 @@ const GameControlCentre = ({ children }) => {
         setGameStatus(GAME_STATUS.LOADED);
 
         // attach event listeners
-        document.addEventListener('keydown', handleKeyDown);
+        window.addEventListener('keydown', handleKeyDown);
         window.addEventListener('blur', handleWindowBlur);
         window.addEventListener('focus', handleWindowFocus);
 
         return () => {
 
             // unregister event listeners
-            document.removeEventListener('keydown', handleKeyDown);
+            window.removeEventListener('keydown', handleKeyDown);
             window.removeEventListener('blur', handleWindowBlur);
             window.removeEventListener('focus', handleWindowFocus)
         }
