@@ -1,4 +1,4 @@
-.container {
+.displayContainer {
     height: 360px;
 
     border: 2px solid black;
@@ -7,32 +7,60 @@
     background-color: whitesmoke;
 
     position: relative;
+    overflow: hidden;
 }
-.textToTypeDisplay,
-.typingAreaContainer,
-.typingArea {
-    position: absolute;
-    top: 0;
-    left: 0;
+.scrollContainer {
+    position: relative;
     width: 100%;
     height: 100%;
-    background-color: transparent;
+
     font-family: inherit;
     font-size: 1.6rem;
     line-height: 4rem;
+    font-weight: 800;
 
     padding: .4rem;
+    overflow: hidden;
 }
 .textToTypeDisplay,
-.typingArea {
-    height: 100%;
-    overflow: clip;
+.typingAreaContainer,
+.typingArea,
+.fakeTypingArea {
+    background-color: transparent;
 }
-.typingAreaContainer {
-    top: 2rem;
+.scrollTarget {
+    margin-top: 4.4rem;
 }
 .typingArea {
     margin: 0;
     border: none;
     outline: none;
+
+    /*  hide the textarea typing area  */
+    width: 0;
+    height: 0;
+}
+.fakeTypingArea {
+    position: absolute;
+    top: 0;
+    transform: translateY(2rem);
+}
+.fakeTypingArea .error {
+    color: red;
+}
+.fakeTypingArea .error .whitespace {
+    background: rgba(255, 0, 0, 0.24);
+}
+.typingCursor {
+    display: inline-block;
+    position: relative;
+}
+.typingCursor::after {
+    content: "_";
+    animation: cursorBlink 1s step-start infinite;
+}
+@keyframes cursorBlink {
+    from { opacity: 100%; }
+    50% { opacity: 0; }
+    to { opacity: 100%; }
 }
