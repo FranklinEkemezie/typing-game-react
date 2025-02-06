@@ -1,0 +1,25 @@
+
+// Game Dispatch Actions
+export const GAME_DISPATCH_ACTIONS = {
+
+    SET_GAME_STATUS: 'SET_GAME_STATUS',
+    SET_TIMER: 'SET_TIMER',
+    CANCEL_TIMER: 'CANCEL_TIMER',
+    SET_TIME_SPENT: 'SET_TIME_SPENT',
+    SET_TEXT: 'SET_TEXT',
+    SET_TYPED_TEXT: 'SET_TYPED_TEXT',
+    SET_CHARS_PER_LINE: 'SET_CHARS_PER_LINE',
+    SET_ERRORS: 'SET_ERRORS'
+};
+
+// Game Status
+export const GAME_STATUS = {
+
+    LOADING: 3601,
+    LOADED: 3602,
+    STARTED: 3603,
+    PAUSED: 3604,
+    ENDED: 3605
+}
+
+
